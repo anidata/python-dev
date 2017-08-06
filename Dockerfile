@@ -24,7 +24,8 @@ RUN bash -c 'source ${HOME}/.nvm/nvm.sh && \
 # Install various packages, this is last to prevent cache busting.
 RUN ${HOME}/.pyenv/shims/pip3 install jupyter matplotlib pandas scikit-learn flask flask-sqlalchemy
 RUN bash -c 'source ${HOME}/.nvm/nvm.sh && \
-        npm install -g create-react-app'
+        npm install -g create-react-app react react-dom react-script \
+                react-c3js'
 
 # Volume mount for project workspace
 VOLUME ["/root/workspace"]
